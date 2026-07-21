@@ -1,0 +1,38 @@
+{
+  "name": "s4dlm",
+  "version": "1.0.0",
+  "description": "SOFT400 Download Manager - Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  },
+  "build": {
+    "appId": "com.soft400.s4dlm",
+    "productName": "S4DLM",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "icon.ico"
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
