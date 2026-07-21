@@ -17,6 +17,7 @@
   "build": {
     "appId": "com.soft400.s4dlm",
     "productName": "S4DLM",
+    "publish": null,
     "files": [
       "main.js",
       "preload.js",
